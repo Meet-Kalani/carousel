@@ -1,0 +1,68 @@
+/* Resetting default setting */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main styling */
+body{
+  height: 100vh;
+  background-color: rgb(230, 212, 212);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#carousel{
+  position: relative;
+}
+
+.slider{
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  width: 600px;
+  scroll-behavior: smooth;
+}
+
+.slider .box{
+  min-width: 200px;
+  height: 200px;
+  background-color: rgb(220, 154, 154);
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.slider-control{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* control icons */
+.slider-control img{
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+
+.slider-control .previous-btn{
+  margin-left: 16px;
+}
+
+.slider-control .next-btn{
+  margin-right: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .slider{
+    width: 100vw;
+  }
+}
